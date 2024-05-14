@@ -1,0 +1,38 @@
+/* FlightList.css */
+.flightListContainer {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flightListTitle {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.flightList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.flightListItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.flightDetail {
+    font-weight: bold;
+    color: #666;
+}
+
+.flightDetail:last-child {
+    color: #999;
+}
