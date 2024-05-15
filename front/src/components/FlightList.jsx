@@ -7,7 +7,7 @@ const FlightList = () => {
     useEffect(() => {
         const fetchFlights = async () => {
             try {
-                const response = await fetch('http://localhost:3000/v1/listarViajes');
+                const response = await fetch('reservas-avion-back.vercel.app/v1/listarViajes');
                 if (response.ok) {
                     const data = await response.json();
                     setFlights(data);
