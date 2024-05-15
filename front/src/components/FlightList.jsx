@@ -3,11 +3,13 @@ import React, { useState, useEffect } from 'react';
 
 const FlightList = () => {
     const [flights, setFlights] = useState([]);
+    const apiUrl = "https://reservas-avion-front.vercel.app";
+
 
     useEffect(() => {
         const fetchFlights = async () => {
             try {
-                const response = await fetch('reservas-avion-back.vercel.app/v1/listarViajes');
+                const response = await fetch(`${apiUrl}/v1/listarViajes`);
                 if (response.ok) {
                     const data = await response.json();
                     setFlights(data);

@@ -11,12 +11,14 @@ function BookingForm() {
     const [showSuggestionsDestino, setShowSuggestionsDestino] = useState(false);
     const [activeSuggestionIndexOrigen, setActiveSuggestionIndexOrigen] = useState(-1);
     const [activeSuggestionIndexDestino, setActiveSuggestionIndexDestino] = useState(-1);
+    const apiUrl = "https://reservas-avion-front.vercel.app";
+
     const [flights, setFlights] = useState([]);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         // Enviar datos al backend
-        const response = await fetch('https://reservas-avion-back.vercel.app/v1/crearViajes', {
+        const response = await fetch(`${apiUrl}/v1/crearViajes`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -28,7 +30,7 @@ function BookingForm() {
     };
     const fetchFlights = async () => {
         try {
-            const response = await fetch('reservas-avion-back.vercel.app/v1/listarViajes');
+            const response = await fetch(`${apiUrl}/v1/listarViajes`);
             if (response.ok) {
                 const data = await response.json();
                 setFlights(data);
@@ -47,7 +49,7 @@ function BookingForm() {
 
     const fetchSuggestions = async (input, setSuggestions, setShowSuggestions, setActiveSuggestionIndex) => {
         try {
-            const response = await fetch(`reservas-avion-back.vercel.app/v1/getSuggestions?query=${input}`);
+            const response = await fetch(`${apiUrl}/v1/getSuggestions?query=${input}`);
             if (response.ok) {
                 const data = await response.json();
                 setSuggestions(data);
