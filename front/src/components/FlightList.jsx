@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const FlightList = () => {
     const [flights, setFlights] = useState([]);
-    const apiUrl = "https://reservas-avion-front.vercel.app";
+    const apiUrl = "https://reservas-avion-back.vercel.app/";
 
 
     useEffect(() => {

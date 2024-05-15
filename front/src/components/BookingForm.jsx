@@ -11,7 +11,7 @@ function BookingForm() {
     const [showSuggestionsDestino, setShowSuggestionsDestino] = useState(false);
     const [activeSuggestionIndexOrigen, setActiveSuggestionIndexOrigen] = useState(-1);
     const [activeSuggestionIndexDestino, setActiveSuggestionIndexDestino] = useState(-1);
-    const apiUrl = "https://reservas-avion-front.vercel.app";
+    const apiUrl = "https://reservas-avion-back.vercel.app/";
 
     const [flights, setFlights] = useState([]);
 
