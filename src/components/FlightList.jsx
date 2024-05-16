@@ -9,7 +9,7 @@ const FlightList = () => {
     useEffect(() => {
         const fetchFlights = async () => {
             try {
-                const response = await fetch(`${apiUrl}/v1/listarViajes`);
+                const response = await fetch(`${apiUrl}v1/listarViajes`);
                 if (response.ok) {
                     const data = await response.json();
                     setFlights(data);
