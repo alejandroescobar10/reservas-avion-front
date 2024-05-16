@@ -13,8 +13,7 @@
   },
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "set PORT=4000 && react-scripts start",
-    "build": "react-scripts build"
+    "start": "set PORT=4000 && react-scripts start"
   },
   "eslintConfig": {
     "extends": [
@@ -34,7 +33,6 @@
       "last 1 safari version"
     ]
   },
-  "homepage": ".",
   "devDependencies": {
     "nodemon": "^3.1.0"
   }
