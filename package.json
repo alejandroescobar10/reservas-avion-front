@@ -13,8 +13,8 @@
   },
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "set PORT=4000 && react-scripts start"
-    
+    "start": "set PORT=4000 && react-scripts start",
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [
