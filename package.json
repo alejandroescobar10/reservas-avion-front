@@ -12,6 +12,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "preinstall": "chmod +x node_modules/.bin/react-scripts",
     "dev": "nodemon index.js",
     "start": "set PORT=4000 && react-scripts start",
     "build": "react-scripts build"
